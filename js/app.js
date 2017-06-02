@@ -12,6 +12,12 @@
    * on this dom element, set the className to 'light-green'
    */
 
+  function setMyLightGreen(){
+    var lightId = this.dataset;
+    this.querySelector(lightId).className = "light-green";
+  }
+
+
 
   /*
    * Create a function named setMyLightClass
@@ -24,6 +30,11 @@
    * use a dom method to select an element where it's ID matches the value of lightId
    * on this dom element, set the className to the value of desiredClass
    */
+
+  function setMyLightClass(event, desiredClass){
+    var lightId = this.dataset;
+    this.querySelector(lightId).className = desiredClass;
+  }
 
 
   /*
