@@ -13,8 +13,8 @@
    */
 
   function setMyLightGreen(){
-    var lightId = this.dataset;
-    this.querySelector(lightId).className = "light-green";
+    var lightId = this.dataset.lightId;
+    document.getElementById(lightId).className = "light-green";
   }
 
 
@@ -32,8 +32,8 @@
    */
 
   function setMyLightClass(event, desiredClass){
-    var lightId = this.dataset;
-    this.querySelector(lightId).className = desiredClass;
+    var lightId = this.dataset.lightId;
+    document.querySelector(lightId).className = desiredClass;
   }
 
 
@@ -42,7 +42,11 @@
    * use a dom element selector method to assign each const
    * to the button that has an id of the same name.
    */
-
+  var btn1 = document.querySelector("#btn1");
+  var btn2 = document.querySelector("#btn2");
+  var btn3 = document.querySelector("#btn3");
+  var btn4 = document.querySelector("#btn4");
+  var btn5 = document.querySelector("#btn5");
 
   /*
    * Add a click event listener to btn1
@@ -52,7 +56,9 @@
    * using the Function prototype method: apply
    * to set the context to the correct object (the current context)
    */
-
+btn1.addEventListener("click", function(){
+  setMyLightGreen.apply(this);
+});
 
   /*
    * Add a click event listener to btn2
